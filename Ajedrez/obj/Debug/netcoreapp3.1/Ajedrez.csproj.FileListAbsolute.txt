@@ -11,3 +11,5 @@ C:\Users\franc\source\repos\Ajedrez\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.cspr
 C:\Users\franc\source\repos\Ajedrez\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.dll
 C:\Users\franc\source\repos\Ajedrez\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.pdb
 C:\Users\franc\source\repos\Ajedrez\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.genruntimeconfig.cache
+C:\Users\totof\Source\Repos\TP_labo2\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.dll
+C:\Users\totof\Source\Repos\TP_labo2\Ajedrez\obj\Debug\netcoreapp3.1\Ajedrez.pdb

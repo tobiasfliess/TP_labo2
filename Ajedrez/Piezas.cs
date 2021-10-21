@@ -12,7 +12,7 @@ namespace Ajedrez
         public int contador;
         public int max;
 
-        public Piezas()
+        public Piezas() // clase padre de todas las piesas
         {
             k = 0;
             p = 0;
@@ -22,7 +22,8 @@ namespace Ajedrez
 
         }
         public void AtaqueFicha(Tablero table) { }
-        public void AtaqueFichaLimpio(Tablero table) { }
+        public void AtaqueFichaLimpio(Tablero table) { }/*nos fijamos que en la ruta de ataque si 
+                                                         curza con otra ficha corte el camino de ataque */
 
     }
 }

@@ -12,7 +12,7 @@
 /* algoritmo para espejar el resultado
 
 int aux;
-
+    
 for(int i=0; i<7; i++)
 {
     for(int j=0; j<4; j++)// va del 0-3 y los espeja con 4-7
@@ -31,20 +31,10 @@ namespace Ajedrez
 {
     class Program
     {
-        //public void OrdenAleatorio(Piezas[] pieza)
-        //{
-        //    Random rnd = new Random();
-        //    int random = rnd.Next(0, 3);
-        //    Piezas aux;
-        //    aux = pieza[random];
-        //    pieza[2] = pieza[random];
-        //    pieza[random] = aux;
-
-
-        //}
+   
         static void Main(string[] args)
         {
-            int Cantidad_Soluciones = 10;
+            int Cantidad_Soluciones = 10;// para hacer 10 tableros distintos
             int Contador_Soluciones = 0;
 
             Tablero tablero = new Tablero();
@@ -56,12 +46,12 @@ namespace Ajedrez
 
             Tablero[] Vtable = new Tablero[10];
 
-            tablero.IniciarTablero();
+            tablero.IniciarTablero();//poner tablero en 0
 
             int cont = 0;
             int cont2 = 0;
 
-            Piezas[] pieza = new Piezas[4];
+            Piezas[] pieza = new Piezas[4];//guardamos las piezas en un array, manteniendo el orden optimo
             pieza[3] = rey;
             pieza[2] = caballo;
             pieza[1] = torre;
@@ -72,16 +62,16 @@ namespace Ajedrez
 
             while (Contador_Soluciones != Cantidad_Soluciones)
             {
-                Random rnd = new Random();
+                Random rnd = new Random();//cambia de orden una pieza al azar con el caballo
                 int random = rnd.Next(0, 3);
                 Piezas aux;
                 aux = pieza[random];
                 pieza[2] = pieza[random];
                 pieza[random] = aux;
 
-                reina.AtaqueFicha(tablero);
+                reina.AtaqueFicha(tablero);//la reina la ponemos primero 
                 for (int i = 0; i < 3; i++)
-                { pieza[i].AtaqueFicha(tablero); }
+                { pieza[i].AtaqueFicha(tablero); }//todas las piezas atacan
 
                 for (int i = 0; i < 8; i++)
                 {
@@ -89,24 +79,24 @@ namespace Ajedrez
                     {
                         if (tablero.tab[i, j] == 0)
                         {
-                            cont++;
+                            cont++;//si hay alguna casilla en 0 no es solucion
                             break;
                         }
                     }
 
                 }
-                if (cont == 0)
+                if (cont == 0)//chequeo que sea solucion 
                 {
                      Console.WriteLine("se cubre todo el tablero");
                     for (int i = 0; i < 10; i++)
                     {
                         if (Vtable[i].tab == tablero.tab)
                         {
-                            cont2++;
+                            cont2++;//si ya existe ese tablero pongo contador en 1
                         }
                     }
                 }
-                if (cont2 == 0)
+                if (cont2 == 0)//si cont2==0 es porque es una nueva solucion
                 {
                     Console.WriteLine( "es una solucion nueva");
                     Vtable[Contador_Soluciones] = tablero;
@@ -118,3 +108,14 @@ namespace Ajedrez
     }
 }
 
+     //public void OrdenAleatorio(Piezas[] pieza)
+        //{
+        //    Random rnd = new Random();
+        //    int random = rnd.Next(0, 3);
+        //    Piezas aux;
+        //    aux = pieza[random];
+        //    pieza[2] = pieza[random];
+        //    pieza[random] = aux;
+
+
+        //}

@@ -24,7 +24,7 @@ namespace Ajedrez
             contador = 0;
             for (i = 3; i < 4; i++)
             {
-                for (j = 2; j < 4; j++) //Se coloca la ficha en posicion
+                for (j = 2; j < 4; j++) //Se coloca la ficha en posicion del medio
                 {
                     tabaux.IniciarTablero();
                     for (k = -8; k < 8; k++) //Se cubren casillas horizontales

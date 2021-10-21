@@ -6,9 +6,9 @@ namespace Ajedrez
 {
     public class Tablero
     {
-        public int LH;
+        public int LH;//posicion horizontal y vertical de la ficha
         public int LV;
-        public int[,] tab = new int[8, 8];
+        public int[,] tab = new int[8, 8];//un tablero de 8x8
 
        public Tablero()
         { LH = 0;
@@ -22,7 +22,7 @@ namespace Ajedrez
 
         }
 
-        public void IniciarTablero()
+        public void IniciarTablero()//ponemos el tablero en 0 todo (vacio)
         {
             for (int i = 0; i < 7; i++)
             {
